@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:animateLayoutChanges="true"
+        tools:context=".HeatherBasedApplications.Leaderboards.LeaderboardsActivity">
+
+    <FrameLayout android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+        <androidx.appcompat.widget.Toolbar
+                android:id="@+id/leader_toolbar"
+                android:layout_width="match_parent"
+                android:background="@android:color/white"
+                android:theme="@style/ToolbarColoredBackArrow"
+                android:layout_height="@dimen/toolbar_size"/>
+
+        <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left|center_vertical"
+                android:text="@string/leaderboards"
+                android:layout_marginStart="50dp"
+                android:fontFamily="@font/gilroy_bold"
+                android:textColor="@color/dark"
+                android:textSize="23sp"/>
+
+
+        <View  android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:foreground="@color/gray"
+                android:layout_gravity="bottom"/>
+
+    </FrameLayout>
+
+    <com.google.android.material.tabs.TabLayout
+            style="@style/LeaderboardsTab"
+            android:id="@+id/leader_tab"
+            android:layout_width="match_parent"
+            android:layout_height="50dp">
+        <com.google.android.material.tabs.TabItem
+                android:layout_width="wrap_content"
+                android:text="@string/max_incline"
+                android:layout_height="wrap_content">
+        </com.google.android.material.tabs.TabItem>
+        <com.google.android.material.tabs.TabItem
+                android:layout_width="wrap_content"
+                android:text="@string/max_chin_ups"
+                android:layout_height="wrap_content">
+        </com.google.android.material.tabs.TabItem>
+        <com.google.android.material.tabs.TabItem
+                android:layout_width="wrap_content"
+                android:text="@string/max_deadlift"
+                android:layout_height="wrap_content">
+        </com.google.android.material.tabs.TabItem>
+        <com.google.android.material.tabs.TabItem
+                android:layout_width="wrap_content"
+                android:text="@string/max_shoulder_press"
+                android:layout_height="wrap_content">
+        </com.google.android.material.tabs.TabItem>
+    </com.google.android.material.tabs.TabLayout>
+
+        <FrameLayout
+                android:id="@+id/legend_tab_container"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+        </FrameLayout>
+
+
+</LinearLayout>

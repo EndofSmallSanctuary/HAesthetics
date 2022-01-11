@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <EditText
+            android:textSize="17sp"
+            android:textColor="@color/exercise_search"
+            android:textColorHint="@color/exercise_search_hint"
+            android:id="@+id/search_field"
+            android:background="@drawable/exercise_list_search_background"
+            android:paddingLeft="12dp"
+            android:paddingRight="12dp"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:paddingTop="5dp"
+            android:hint="@string/search"
+            android:drawableLeft="@drawable/search"
+            android:drawablePadding="12dp"
+            android:fontFamily="@font/gilroy_regular"/>
+
+
+    <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/search_recycler"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+</LinearLayout>
+    

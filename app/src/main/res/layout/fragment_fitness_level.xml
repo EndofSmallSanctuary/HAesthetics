@@ -1,0 +1,238 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:aapt="http://schemas.android.com/aapt"
+        android:orientation="vertical"
+        android:paddingLeft="@dimen/margin_huge"
+        android:paddingRight="@dimen/margin_huge"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:animateLayoutChanges="true">
+
+    <View
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_weight="1">
+
+    </View>
+
+    <TextView
+            android:layout_marginBottom="@dimen/margin_huge"
+            android:text="@string/fitness_level"
+            android:layout_gravity="center_horizontal"
+            style="@style/SurveyHeaderStyle"
+            android:fontFamily="@font/gilroy_bold"/>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/fitness_level_Newbie"
+            android:background="@drawable/offer_unselected"
+            android:focusable="true"
+            android:clickable="true"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:foreground="?attr/selectableItemBackground">
+
+        <LinearLayout
+                android:orientation="vertical"
+                android:padding="@dimen/margin_big"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toLeftOf="@+id/fitness_level_newbie_check"
+                app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/gilroy_bold"
+                    android:text="@string/newbie"
+                    android:textColor="@color/white"
+                    android:textSize="20sp" />
+
+            <TextView
+                    android:textSize="16sp"
+                    android:textColor="@color/gray"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/level_newbie_description"
+                    android:fontFamily="@font/gilroy_bold"/>
+        </LinearLayout>
+
+        <ImageView
+                android:id="@+id/fitness_level_newbie_check"
+                android:visibility="gone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:layout_marginRight="@dimen/margin_big"
+                android:layout_marginBottom="30dp"
+                android:src="@drawable/blue_check"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/fitness_level_Beginner"
+            android:background="@drawable/offer_unselected"
+            android:focusable="true"
+            android:clickable="true"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_big"
+            android:foreground="?attr/selectableItemBackground">
+
+        <LinearLayout
+                android:orientation="vertical"
+                android:padding="@dimen/margin_big"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toLeftOf="@+id/fitness_level_beginner_check"
+                app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                    android:textSize="20sp"
+                    android:textColor="@color/white"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/beginner"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    android:fontFamily="@font/gilroy_bold"/>
+            <TextView
+                    android:textSize="16sp"
+                    android:textColor="@color/gray"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/level_beginner_description"
+                    android:fontFamily="@font/gilroy_bold"/>
+        </LinearLayout>
+
+        <ImageView
+                android:id="@+id/fitness_level_beginner_check"
+                android:visibility="gone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:layout_marginRight="@dimen/margin_big"
+                android:layout_marginBottom="30dp"
+                android:src="@drawable/blue_check"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/fitness_level_Intermediate"
+            android:background="@drawable/offer_unselected"
+            android:focusable="true" android:clickable="true"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_big"
+            android:foreground="?attr/selectableItemBackground">
+
+        <LinearLayout
+                android:orientation="vertical"
+                android:padding="@dimen/margin_big"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toLeftOf="@+id/fitness_level_intermediate_check"
+                app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/gilroy_bold"
+                    android:text="@string/intermediate"
+                    android:textColor="@color/white"
+                    android:textSize="20sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                    android:textSize="16sp"
+                    android:textColor="@color/gray"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/level_intermediate_description"
+                    android:fontFamily="@font/gilroy_bold"/>
+        </LinearLayout>
+
+        <ImageView
+                android:id="@+id/fitness_level_intermediate_check"
+                android:visibility="gone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:layout_marginRight="@dimen/margin_big"
+                android:layout_marginBottom="30dp"
+                android:src="@drawable/blue_check"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+    <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/fitness_level_Advanced"
+            android:background="@drawable/offer_unselected"
+            android:focusable="true"
+            android:clickable="true"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_big"
+            android:foreground="?attr/selectableItemBackground">
+
+        <LinearLayout
+                android:orientation="vertical"
+                android:padding="@dimen/margin_big"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toLeftOf="@+id/fitness_level_advanced_check"
+                app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                    android:textSize="20sp"
+                    android:textColor="@color/white"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/advanced"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    android:fontFamily="@font/gilroy_bold"/>
+
+            <TextView
+                    android:textSize="16sp"
+                    android:textColor="@color/gray"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/level_advanced_description"
+                    android:fontFamily="@font/gilroy_bold"/>
+
+        </LinearLayout>
+        <ImageView
+                android:id="@+id/fitness_level_advanced_check"
+                android:visibility="gone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:layout_marginRight="@dimen/margin_big"
+                android:layout_marginBottom="30dp"
+                android:src="@drawable/blue_check"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintRight_toRightOf="parent" app:layout_constraintTop_toTopOf="parent"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <View android:layout_width="0dp" android:layout_height="0dp" android:layout_weight="1"/>
+</LinearLayout>

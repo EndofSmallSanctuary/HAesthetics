@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:fitsSystemWindows="false"
+        xmlns:android="http://schemas.android.com/apk/res/android">
+
+<!--Blur 30%-->
+<ImageView android:layout_height="match_parent"
+            android:layout_width="match_parent"
+            android:scaleType="centerCrop"
+            android:src="@drawable/helarge"
+        xmlns:android="http://schemas.android.com/apk/res/android"/>
+
+    <View
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/black_cover_grad"/>
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent">
+
+
+    <ImageView
+            android:id="@+id/splash_logo"
+            android:src="@drawable/helogo"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            app:layout_constraintEnd_toStartOf="@id/splash_hollywood"
+            app:layout_constraintTop_toTopOf="@id/splash_hollywood"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintBottom_toBottomOf="@id/splash_hollywood"/>
+
+
+    <TextView
+            android:id="@+id/splash_hollywood"
+            android:fontFamily="@font/gilroy_bold"
+            android:textColor="@color/main"
+            android:textSize="45sp"
+            android:textAllCaps="true"
+            android:text="ollywood"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginStart="@dimen/margin_small"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toEndOf="@id/splash_logo"
+           />
+    <TextView
+            android:id="@+id/splash_aethetics"
+            android:fontFamily="@font/gilroy_bold"
+            android:textColor="@color/white"
+            android:textSize="45sp"
+            android:textAllCaps="false"
+            android:text="Aethetics"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/splash_hollywood"
+            app:layout_constraintEnd_toEndOf="@id/splash_hollywood"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

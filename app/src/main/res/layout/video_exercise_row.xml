@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:orientation="horizontal"
+        android:weightSum="1"
+        android:layout_marginEnd="5dp"
+        android:layout_width="180dp"
+        android:layout_height="60dp">
+
+    <com.makeramen.roundedimageview.RoundedImageView
+            android:id="@+id/video_exrow_img"
+            android:layout_width="0dp"
+            android:layout_weight="0.6"
+            android:layout_height="match_parent"
+            android:src="@drawable/testsrc"
+            android:scaleType="centerCrop"
+            app:riv_corner_radius="10dp"/>
+    <TextView
+            android:id="@+id/video_exrow_name"
+            android:layout_weight="0.4"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:textSize="14sp"
+            android:gravity="center"
+            android:layout_marginStart="@dimen/margin_mini"
+            android:textColor="@color/dark"
+            android:text="Standing Shoulder Press"
+            android:fontFamily="@font/gilroy_bold"/>
+
+
+</LinearLayout>

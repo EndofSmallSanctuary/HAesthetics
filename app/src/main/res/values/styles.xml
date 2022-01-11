@@ -1,0 +1,220 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="SurveyTheme" parent="Theme.AppCompat.DayNight.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">#171717</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+    <style name="PlainTheme" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/main</item>
+        <item name="colorPrimaryDark">@color/dark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+
+
+    <!-- Base application theme. -->
+    <style name="AppThemeNoActionBar" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+
+
+        <item name="android:windowTranslucentStatus">true</item>
+        <item name="android:windowDrawsSystemBarBackgrounds">true</item>
+        <item name="android:navigationBarColor">@android:color/transparent</item>
+        <item name="android:windowTranslucentNavigation">false</item>
+
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+<!--        <item name="android:windowFullscreen">true</item>-->
+
+
+    </style>
+
+
+    <style name="NumberPickerTheme">
+        <item name="fontFamily">@font/gilroy_bold</item>
+        <item name="android:descendantFocusability">blocksDescendants</item>
+        <item name="android:textColorPrimary">@android:color/white</item>
+        <item name="colorControlNormal">@android:color/transparent</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="NumberPickerDark">
+        <item name="fontFamily">@font/gilroy_bold</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:descendantFocusability">blocksDescendants</item>
+        <item name="android:textColorPrimary">@color/dark</item>
+        <item name="colorControlNormal">@android:color/transparent</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+
+    <!--Themes -->
+
+    <style name="SurveyHeaderStyle">
+        <item name="android:textSize">32sp</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="fontFamily">@font/gilroy_bold</item>
+    </style>
+
+    <style name="SurveySubHeaderStyle">
+        <item name="android:textSize">26sp</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="fontFamily">@font/gilroy_bold</item>
+    </style>
+
+    <style name="FinalizeDescSubHeaderStyle">
+        <item name="android:textSize">26sp</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="fontFamily">@font/gilroy_bold</item>
+    </style>
+
+    <style name="FinalizeDescStyle">
+        <item name="android:textSize">16sp</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="fontFamily">@font/gilroy_bold</item>
+    </style>
+
+
+    <style name="PerformanceInputStyle">
+        <item name="android:textSize">16sp</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textColorHint">@color/exercise_search_hint</item>
+        <item name="android:gravity">left|center_horizontal|clip_horizontal</item>
+        <item name="android:background">@drawable/input_background</item>
+        <item name="android:paddingTop">8dp</item>
+        <item name="android:paddingBottom">8dp</item>
+        <item name="android:layout_width">78dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:hint">"0"</item>
+        <item name="android:ems">10</item>
+        <item name="android:inputType">numberDecimal</item>
+        <item name="android:textCursorDrawable">@null</item>
+        <item name="fontFamily">@font/gilroy_bold</item>
+    </style>
+
+    <style name="OnBoardingButtonStyle">
+        <item name="android:textSize">18sp</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:gravity">left|center_horizontal|clip_horizontal</item>
+        <item name="android:background">@drawable/blue_card_size_radius_selector</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">@dimen/onboarding_button_height</item>
+        <item name="fontFamily">@font/conthrax</item>
+    </style>
+
+    <style name="EditProfileFitnessLayoutStyle">
+        <item name="android:background">@color/white</item>
+        <item name="android:focusable">true</item>
+        <item name="android:clickable">true</item>
+        <item name="android:foreground">?attr/selectableItemBackground</item>
+    </style>
+    <style name="EditProfileHeaderStyle">
+        <item name="fontFamily">@font/gilroy_bold</item>
+        <item name="android:textColor">@color/dark</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginLeft">@dimen/default_screen_margin</item>
+        <item name="android:layout_marginTop">20dp</item>
+        <item name="android:layout_marginBottom">10dp</item>
+    </style>
+    <style name="EditProfileLabelButtonStyle">
+        <item name="android:textColor">@color/comments_title</item>
+        <item name="android:background">@color/white</item>
+        <item name="android:padding">@dimen/default_screen_margin</item>
+        <item name="android:focusable">true</item>
+        <item name="android:clickable">true</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:foreground">?attr/selectableItemBackground</item>
+        <item name="android:drawableRight">@drawable/ic_right_arrow</item>
+        <item name="android:drawableEnd">@drawable/ic_right_arrow</item>
+        <item name="fontFamily">@font/gilroy_regular</item>
+    </style>
+
+    <style name="EditProfileLabelStyle">
+        <item name="android:textSize">14sp</item>
+        <item name="android:textColor">@color/profile_label</item>
+        <item name="android:layout_gravity">left|center_horizontal|clip_horizontal</item>
+        <item name="android:paddingLeft">@dimen/default_screen_margin</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="fontFamily">@font/gilroy_regular</item>
+    </style>
+
+    <style name="EditProfileLabelStyleNoPad">
+        <item name="android:textSize">14sp</item>
+        <item name="android:textColor">@color/profile_label</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="fontFamily">@font/gilroy_regular</item>
+    </style>
+    <style name="ToolbarColoredBackArrow" parent="Theme.AppCompat.DayNight">
+        <item name="android:textColorSecondary">@color/dark</item>
+    </style>
+
+    <style name="ProfileEditTextStyle">
+        <item name="android:textSize">14sp</item>
+        <item name="fontFamily">@font/gilroy_bold</item>
+        <item name="android:textColor">@color/profile_input_text</item>
+        <item name="android:gravity">right|center_horizontal</item>
+        <item name="android:background">@null</item>
+        <item name="android:paddingLeft">@dimen/default_screen_margin</item>
+        <item name="android:paddingTop">13dp</item>
+        <item name="android:paddingRight">@dimen/default_screen_margin</item>
+        <item name="android:paddingBottom">13dp</item>
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginLeft">8dp</item>
+        <item name="android:maxLines">1</item>
+        <item name="android:lines">1</item>
+        <item name="android:singleLine">true</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:textCursorDrawable">@drawable/edit_text_cursor_dark</item>
+        <item name="colorControlActivated">@color/comments_title</item>
+        <item name="colorControlHighlight">@color/comments_title</item>
+        <item name="colorControlNormal">@color/comments_title</item>
+    </style>
+
+    <style name="SwitchTheme">
+        <item name="android:colorForeground">@color/gray</item>
+        <item name="colorControlActivated">@color/dark</item>
+        <item name="colorSwitchThumbNormal">@color/gray</item>
+    </style>
+
+    <style name="SettingsSwitchStyle">
+        <item name="android:textSize">14sp</item>
+        <item name="android:textColor">@color/comments_title</item>
+        <item name="android:background">@color/white</item>
+        <item name="android:padding">@dimen/default_screen_margin</item>
+        <item name="android:paddingLeft">@dimen/default_screen_margin</item>
+        <item name="android:focusable">true</item>
+        <item name="android:clickable">true</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:foreground">?attr/selectableItemBackground</item>
+        <item name="fontFamily">@font/gilroy_regular</item>
+    </style>
+
+    <style name="LeaderboardsTab" parent="Widget.MaterialComponents.TabLayout">
+        <item name="fontFamily">@font/gilroy_bold</item>
+        <item name="tabTextColor">@color/white</item>
+        <item name="android:background">@color/dark</item>
+        <item name="backgroundColor">@color/dark</item>
+    </style>
+
+</resources>

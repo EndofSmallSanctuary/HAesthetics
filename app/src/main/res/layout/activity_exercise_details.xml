@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        xmlns:android="http://schemas.android.com/apk/res/android">
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:layout_height="match_parent"
+        tools:context=".HeatherBasedApplications.ExerciseDetails.ExerciseDetailsActivity">
+
+    <FrameLayout android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+        <androidx.appcompat.widget.Toolbar
+                android:id="@+id/exercise_toolbar"
+                android:layout_width="match_parent"
+                android:background="@android:color/white"
+                android:theme="@style/ToolbarColoredBackArrow"
+                android:layout_height="@dimen/toolbar_size"/>
+
+        <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left|center_vertical"
+                android:text="Exercise Details"
+                android:layout_marginStart="50dp"
+                android:fontFamily="@font/gilroy_bold"
+                android:textColor="@color/dark"
+                android:textSize="23sp"/>
+
+
+        <View  android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:foreground="@color/gray"
+                android:layout_gravity="bottom"/>
+
+    </FrameLayout>
+
+    <com.makeramen.roundedimageview.RoundedImageView
+            android:id="@+id/exercise_img"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:src="@drawable/testexercise"
+            android:scaleType="fitXY"/>
+
+    <TextView
+            android:id="@+id/exercise_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:textSize="30sp"
+            android:layout_marginTop="@dimen/margin_medium"
+            android:textColor="@color/main"
+            android:text="Incline Press"
+            android:fontFamily="@font/gilroy_bold"/>
+
+    <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:layout_gravity="left"
+            android:layout_marginStart="10dp"
+            android:text="Category"
+            android:fontFamily="@font/gilroy_bold"
+            android:textSize="23sp"
+            android:textColor="@color/main"/>
+
+    <TextView
+            android:id="@+id/exercise_category"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="18sp"
+            android:fontFamily="@font/gilroy_bold"
+            android:textColor="@color/gray"/>
+
+
+    <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:layout_gravity="left"
+            android:layout_marginStart="10dp"
+            android:text="@string/description"
+            android:fontFamily="@font/gilroy_bold"
+            android:textSize="23sp"
+            android:textColor="@color/main"/>
+    <TextView
+            android:id="@+id/exercise_description"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="18sp"
+            android:gravity="center_horizontal"
+            android:layout_gravity="center_horizontal"
+            android:text="PGKFDJLKGFDSJOKLGJKFL:G:JKLFHBKJGLHKIGFBJHKDSGLIJKFHGJSFDHGBKLJSHGJOSDHLKJGSDHLKGHBSFDLKJGHKJBJFJHGKJLFSD"
+            android:fontFamily="@font/gilroy_bold"
+            android:textColor="@color/gray"/>
+
+    <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:layout_gravity="left"
+            android:layout_marginStart="10dp"
+            android:text="@string/your_results"
+            android:fontFamily="@font/gilroy_bold"
+            android:textSize="23sp"
+            android:textColor="@color/main"/>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:layout_gravity="center">
+        <TextView
+                android:id="@+id/exercise_weight_header"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/weight_column"
+                android:fontFamily="@font/gilroy_bold"
+                android:textColor="@color/dark"
+                android:textSize="19sp"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"/>
+        <EditText
+                android:id="@+id/exercise_weight_field"
+                android:layout_width="50dp"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/gilroy_bold"
+                android:hint="@string/kg"
+                android:textColor="@color/dark"
+                android:textColorHint="@color/gray"
+                android:textAlignment="center"
+                android:textSize="19sp"
+                app:layout_constraintLeft_toRightOf="@id/exercise_weight_header"
+                app:layout_constraintTop_toTopOf="@id/exercise_weight_header"
+                app:layout_constraintBottom_toBottomOf="@id/exercise_weight_header"/>
+        <TextView
+                android:id="@+id/exercise_results_divider"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/gilroy_bold"
+                android:textSize="19sp"
+                android:textColor="@color/dark"
+                app:layout_constraintLeft_toRightOf="@id/exercise_weight_field"
+                android:layout_marginStart="@dimen/margin_small"
+                android:text="@string/exdetails_for"
+                app:layout_constraintBottom_toBottomOf="@id/exercise_weight_field"
+                app:layout_constraintTop_toTopOf="@id/exercise_weight_field"/>
+        <TextView
+                android:id="@+id/exercise_reps_header"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/reps_column"
+                android:layout_marginStart="@dimen/margin_medium"
+                android:fontFamily="@font/gilroy_bold"
+                android:textColor="@color/dark"
+                android:textSize="19sp"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toRightOf="@id/exercise_results_divider"/>
+        <EditText
+                android:id="@+id/exercise_reps_field"
+                android:layout_width="50dp"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/gilroy_bold"
+                android:textColor="@color/dark"
+                android:textAlignment="center"
+                android:textSize="19sp"
+                android:layout_marginEnd="@dimen/margin_small"
+                app:layout_constraintLeft_toRightOf="@id/exercise_reps_header"
+                app:layout_constraintTop_toTopOf="@id/exercise_reps_header"
+                app:layout_constraintBottom_toBottomOf="@id/exercise_reps_header"/>
+
+
+
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</LinearLayout>
+</androidx.core.widget.NestedScrollView>

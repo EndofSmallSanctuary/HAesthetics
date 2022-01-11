@@ -1,0 +1,741 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:layout_width="match_parent"
+            android:layout_height="match_parent"
+        xmlns:android="http://schemas.android.com/apk/res/android">
+<androidx.core.widget.NestedScrollView
+        android:background="@color/white"
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/profile_container"
+            android:visibility="gone"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+
+
+
+
+        <ImageView
+                android:id="@+id/profile_view_header"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:src="@drawable/grad"
+                android:scaleType="centerCrop"
+                app:layout_constraintTop_toTopOf="parent"/>
+
+        <ImageView
+                android:visibility="gone"
+                android:clickable="true"
+                android:focusable="true"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                android:id="@+id/profile_backbutton"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_marginTop="?actionBarSize"
+                android:layout_marginLeft="25dp"
+                android:adjustViewBounds="true"
+                android:scaleType="centerInside"
+                android:src="@drawable/profile_back_button_style" />
+
+        <ImageView
+                android:clickable="true"
+                android:focusable="true"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                android:id="@+id/profile_starteedit"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_alignParentRight="true"
+                android:layout_marginTop="?actionBarSize"
+                android:layout_marginRight="25dp"
+                android:adjustViewBounds="true"
+                android:scaleType="centerInside"
+                android:src="@drawable/profile_settings_button_style" />
+
+        <FrameLayout
+                android:id="@+id/profile_layout_header"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@android:color/transparent"
+                app:layout_constraintBottom_toBottomOf="@id/profile_view_header"
+                app:layout_constraintTop_toBottomOf="@id/profile_view_header"
+                >
+
+            <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginEnd="20dp"
+                    android:layout_marginBottom="15dp"
+                    app:cardBackgroundColor="@color/white"
+                    app:cardCornerRadius="8dp"
+                    app:cardElevation="10dp">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                    <TextView
+                            android:id="@+id/profile_name"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="45dp"
+                            android:textColor="@color/main"
+                            android:textSize="18sp"
+                            android:fontFamily="@font/gilroy_bold"
+                            app:layout_constraintTop_toTopOf="parent"
+                            android:gravity="center"/>
+                    <TextView
+                            android:id="@+id/profile_fullname"
+                            android:gravity="center"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/gilroy_regular"
+                            android:textSize="15sp"
+                            app:layout_constraintTop_toBottomOf="@id/profile_name"/>
+
+                    <TextView
+                            android:id="@+id/profile_physique_header"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="15dp"
+                            android:gravity="center"
+                            android:textColor="@color/main"
+                            android:fontFamily="@font/gilroy_bold"
+                            android:textSize="16sp"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@id/profile_fullname"
+                            app:layout_constraintEnd_toStartOf="@id/profile_friends_header"/>
+
+                    <TextView
+                            android:id="@+id/profile_friends_header"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="15dp"
+                            android:gravity="center"
+                            android:text="12"
+                            android:textColor="@color/main"
+                            android:textSize="16sp"
+                            android:fontFamily="@font/gilroy_bold"
+                            app:layout_constraintEnd_toStartOf="@id/profile_cards_header"
+                            app:layout_constraintStart_toEndOf="@id/profile_physique_header"
+                            app:layout_constraintTop_toBottomOf="@id/profile_fullname"/>
+                    <TextView
+                            android:id="@+id/profile_cards_header"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="15dp"
+                            android:gravity="center"
+                            android:text="3"
+                            android:textColor="@color/main"
+                            android:textSize="16sp"
+                            android:fontFamily="@font/gilroy_bold"
+                            app:layout_constraintStart_toEndOf="@id/profile_friends_header"
+                            app:layout_constraintTop_toBottomOf="@id/profile_fullname"
+                            app:layout_constraintEnd_toEndOf="parent"/>
+
+                    <TextView
+                            android:id="@+id/profile_physique_label"
+                            app:layout_constraintTop_toBottomOf="@id/profile_physique_header"
+                            app:layout_constraintStart_toStartOf="@+id/profile_physique_header"
+                            app:layout_constraintEnd_toEndOf="@id/profile_physique_header"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            android:layout_marginBottom="10dp"
+                            android:gravity="center"
+                            android:textAllCaps="true"
+                            android:text="@string/physique"
+                            android:textSize="14sp"
+                            android:textColor="@color/dark"
+                            android:fontFamily="@font/gilroy_regular"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"/>
+                    <TextView
+                            android:id="@+id/profile_friends_label"
+                            app:layout_constraintTop_toBottomOf="@id/profile_friends_header"
+                            app:layout_constraintStart_toStartOf="@+id/profile_friends_header"
+                            app:layout_constraintEnd_toEndOf="@id/profile_friends_header"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            android:layout_marginBottom="10dp"
+                            android:gravity="center"
+                            android:textAllCaps="true"
+                            android:textColor="@color/dark"
+                            android:text="@string/friends"
+                            android:textSize="14sp"
+                            android:fontFamily="@font/gilroy_regular"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"/>
+                    <TextView
+                            android:id="@+id/profile_cards_label"
+                            app:layout_constraintTop_toBottomOf="@id/profile_cards_header"
+                            app:layout_constraintStart_toStartOf="@+id/profile_cards_header"
+                            app:layout_constraintEnd_toEndOf="@id/profile_cards_header"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            android:layout_marginBottom="10dp"
+                            android:gravity="center"
+                            android:textAllCaps="true"
+                            android:textColor="@color/dark"
+                            android:text="@string/aesthetics"
+                            android:textSize="14sp"
+                            android:fontFamily="@font/gilroy_regular"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"/>
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </androidx.cardview.widget.CardView>
+
+        </FrameLayout>
+
+        <com.mikhaellopez.circularimageview.CircularImageView
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                app:civ_border_width="3dp"
+                android:scaleType="centerCrop"
+                app:layout_constraintBottom_toTopOf="@id/profile_layout_header"
+                app:layout_constraintTop_toTopOf="@id/profile_layout_header"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:id="@+id/profile_avatar"/>
+        <TextView
+                android:id="@+id/profile_titles_header"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="5dp"
+                android:text="@string/titles"
+                android:textAllCaps="true"
+                android:textColor="@color/dark"
+                android:fontFamily="@font/gilroy_bold"
+                android:textSize="15sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/profile_layout_header"/>
+
+        <LinearLayout
+                android:id="@+id/profile_titles_layout"
+                android:orientation="horizontal"
+                android:layout_marginStart="25dp"
+                android:layout_marginTop="5dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@id/profile_titles_header">
+
+            <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="12dp"
+                    android:background="@drawable/titles_main"
+                    android:gravity="center"
+                    android:includeFontPadding="false"
+                    android:paddingStart="10dp"
+                    android:paddingEnd="10dp"
+                    android:paddingTop="5dp"
+                    android:paddingBottom="5dp"
+                    android:text="@string/Creator"
+                    android:textColor="@color/main"
+                    android:textSize="14sp"
+                    android:fontFamily="@font/gilroy_regular"/>
+            <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="12dp"
+                    android:background="@drawable/titles_main"
+                    android:gravity="center"
+                    android:includeFontPadding="false"
+                    android:paddingStart="10dp"
+                    android:paddingEnd="10dp"
+                    android:paddingTop="5dp"
+                    android:paddingBottom="5dp"
+                    android:text="@string/captain"
+                    android:textColor="@color/main"
+                    android:textSize="14sp"
+                    android:fontFamily="@font/gilroy_regular"/>
+            <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="12dp"
+                    android:background="@drawable/titles_main"
+                    android:gravity="center"
+                    android:includeFontPadding="false"
+                    android:paddingStart="10dp"
+                    android:paddingEnd="10dp"
+                    android:paddingTop="5dp"
+                    android:paddingBottom="5dp"
+                    android:text="@string/HHomephys"
+                    android:textColor="@color/main"
+                    android:textSize="14sp"
+                    android:fontFamily="@font/gilroy_regular"/>
+
+        </LinearLayout>
+
+        <TextView
+                android:id="@+id/profile_info_header"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="15dp"
+                android:text="@string/profile_information"
+                android:textAllCaps="true"
+                android:textColor="@color/dark"
+                android:fontFamily="@font/gilroy_bold"
+                android:textSize="15sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/profile_titles_layout"/>
+
+
+        <LinearLayout
+                android:id="@+id/profile_gender_layout"
+                android:orientation="horizontal"
+                app:layout_constraintTop_toBottomOf="@id/profile_info_header"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginTop="5dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+            <TextView
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="5dp"
+                    android:layout_marginStart="25dp"
+                    android:gravity="left"
+                    android:textAllCaps="true"
+                    android:layout_width="wrap_content"
+                    android:text="@string/gender"
+                    android:fontFamily="@font/gilroy_regular"
+                    android:textColor="@color/dark"
+                    android:textSize="14sp"
+                    android:layout_height="wrap_content">
+            </TextView>
+
+            <TextView
+                    android:id="@+id/profile_gender"
+                    android:gravity="right"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="5dp"
+                    android:layout_width="0dp"
+                    android:layout_marginEnd="25dp"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/gilroy_bold"
+                    android:textColor="@color/main"
+                    android:textSize="14sp"
+                    android:layout_height="wrap_content">
+            </TextView>
+
+        </LinearLayout>
+        <View
+                android:id="@+id/profile_gender_divider"
+                android:background="@color/bookmarks_category_divider"
+                android:layout_width="match_parent"
+                app:layout_constraintTop_toBottomOf="@id/profile_gender_layout"
+                android:layout_height="1dp">
+        </View>
+
+        <LinearLayout
+                android:id="@+id/profile_height_layout"
+                android:orientation="horizontal"
+                app:layout_constraintTop_toBottomOf="@id/profile_gender_divider"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+            <TextView
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="5dp"
+                    android:layout_marginStart="25dp"
+                    android:gravity="center_vertical"
+                    android:layout_width="wrap_content"
+                    android:textAllCaps="true"
+                    android:text="@string/height"
+                    android:fontFamily="@font/gilroy_regular"
+                    android:textColor="@color/dark"
+                    android:textSize="14sp"
+                    android:layout_height="wrap_content">
+            </TextView>
+
+            <TextView
+                    android:id="@+id/profile_height"
+                    android:gravity="right"
+                    android:layout_marginBottom="5dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_width="0dp"
+                    android:layout_marginEnd="25dp"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/gilroy_bold"
+                    android:textColor="@color/main"
+                    android:textSize="14sp"
+                    android:layout_height="wrap_content">
+            </TextView>
+
+        </LinearLayout>
+        <View
+                android:id="@+id/profile_height_divider"
+                android:background="@color/bookmarks_category_divider"
+                android:layout_width="match_parent"
+                app:layout_constraintTop_toBottomOf="@id/profile_height_layout"
+                android:layout_height="1dp">
+        </View>
+
+
+        <LinearLayout
+                android:id="@+id/profile_weight_layout"
+                android:orientation="horizontal"
+                app:layout_constraintTop_toBottomOf="@id/profile_height_divider"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginTop="5dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+            <TextView
+                    android:layout_marginBottom="5dp"
+                    android:layout_marginStart="25dp"
+                    android:gravity="center_vertical"
+                    android:layout_width="wrap_content"
+                    android:text="@string/weight"
+                    android:textAllCaps="true"
+                    android:fontFamily="@font/gilroy_regular"
+                    android:textColor="@color/dark"
+                    android:textSize="14sp"
+                    android:layout_height="wrap_content">
+            </TextView>
+
+            <TextView
+                    android:id="@+id/profile_weight"
+                    android:gravity="right"
+                    android:layout_width="0dp"
+                    android:layout_marginEnd="25dp"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/gilroy_bold"
+                    android:textColor="@color/main"
+                    android:textSize="14sp"
+                    android:layout_height="wrap_content">
+            </TextView>
+
+        </LinearLayout>
+        <View
+                android:id="@+id/profile_weight_divider"
+                android:background="@color/bookmarks_category_divider"
+                android:layout_width="match_parent"
+                app:layout_constraintTop_toBottomOf="@id/profile_weight_layout"
+                android:layout_height="1dp">
+        </View>
+
+        <LinearLayout
+                android:id="@+id/profile_split_layout"
+                android:orientation="horizontal"
+                app:layout_constraintTop_toBottomOf="@id/profile_weight_layout"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginTop="5dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+            <TextView
+                    android:layout_marginBottom="5dp"
+                    android:layout_marginStart="25dp"
+                    android:gravity="center_vertical"
+                    android:layout_width="wrap_content"
+                    android:text="@string/split"
+                    android:textAllCaps="true"
+                    android:fontFamily="@font/gilroy_regular"
+                    android:textColor="@color/dark"
+                    android:textSize="14sp"
+                    android:layout_height="wrap_content">
+            </TextView>
+
+            <TextView
+                    android:id="@+id/profile_split"
+                    android:gravity="right"
+                    android:layout_width="0dp"
+                    android:layout_marginEnd="25dp"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/gilroy_bold"
+                    android:textColor="@color/main"
+                    android:textSize="14sp"
+                    android:layout_height="wrap_content">
+            </TextView>
+
+        </LinearLayout>
+        <View
+                android:id="@+id/profile_split_divider"
+                android:background="@color/bookmarks_category_divider"
+                android:layout_width="match_parent"
+                app:layout_constraintTop_toBottomOf="@id/profile_split_layout"
+                android:layout_height="1dp">
+        </View>
+
+        <TextView
+                android:id="@+id/profile_keylifts_header"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="15dp"
+                android:text="@string/keylifts_5rep_performance"
+                android:textAllCaps="true"
+                android:textColor="@color/dark"
+                android:fontFamily="@font/gilroy_bold"
+                android:textSize="15sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/profile_split_divider"/>
+
+        <LinearLayout
+                android:id="@+id/profile_incline_layout"
+                android:orientation="horizontal"
+                app:layout_constraintTop_toBottomOf="@id/profile_keylifts_header"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginTop="5dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+            <TextView
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="5dp"
+                    android:layout_marginStart="25dp"
+                    android:gravity="center_vertical"
+                    android:layout_width="wrap_content"
+                    android:text="@string/max_incline"
+                    android:textAllCaps="true"
+                    android:fontFamily="@font/gilroy_regular"
+                    android:textColor="@color/dark"
+                    android:textSize="14sp"
+                    android:layout_height="wrap_content">
+            </TextView>
+
+            <TextView
+                    android:id="@+id/profile_incline"
+                    android:gravity="right"
+                    android:layout_width="0dp"
+                    android:layout_marginEnd="25dp"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/gilroy_bold"
+                    android:textColor="@color/main"
+                    android:textSize="14sp"
+                    android:layout_height="wrap_content">
+            </TextView>
+
+        </LinearLayout>
+        <View
+                android:id="@+id/profile_incline_divider"
+                android:background="@color/bookmarks_category_divider"
+                android:layout_width="match_parent"
+                app:layout_constraintTop_toBottomOf="@id/profile_incline_layout"
+                android:layout_height="1dp">
+        </View>
+
+        <LinearLayout
+                android:id="@+id/profile_chinups_layout"
+                android:orientation="horizontal"
+                app:layout_constraintTop_toBottomOf="@id/profile_incline_divider"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginTop="5dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+            <TextView
+                    android:layout_marginBottom="5dp"
+                    android:layout_marginStart="25dp"
+                    android:gravity="center_vertical"
+                    android:layout_width="wrap_content"
+                    android:text="@string/max_chin_ups"
+                    android:textAllCaps="true"
+                    android:fontFamily="@font/gilroy_regular"
+                    android:textColor="@color/dark"
+                    android:textSize="14sp"
+                    android:layout_height="wrap_content">
+            </TextView>
+
+            <TextView
+                    android:id="@+id/profile_chinups"
+                    android:gravity="right"
+                    android:layout_width="0dp"
+                    android:layout_marginEnd="25dp"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/gilroy_bold"
+                    android:textColor="@color/main"
+                    android:textSize="14sp"
+                    android:layout_height="wrap_content">
+            </TextView>
+
+        </LinearLayout>
+        <View
+                android:id="@+id/profile_chinups_divider"
+                android:background="@color/bookmarks_category_divider"
+                android:layout_width="match_parent"
+                app:layout_constraintTop_toBottomOf="@id/profile_chinups_layout"
+                android:layout_height="1dp">
+        </View>
+
+        <LinearLayout
+                android:id="@+id/profile_deadlift_layout"
+                android:orientation="horizontal"
+                app:layout_constraintTop_toBottomOf="@id/profile_chinups_divider"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginTop="5dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+            <TextView
+                    android:layout_marginBottom="5dp"
+                    android:layout_marginStart="25dp"
+                    android:gravity="center_vertical"
+                    android:layout_width="wrap_content"
+                    android:text="@string/max_deadlift"
+                    android:textAllCaps="true"
+                    android:fontFamily="@font/gilroy_regular"
+                    android:textColor="@color/dark"
+                    android:textSize="14sp"
+                    android:layout_height="wrap_content">
+            </TextView>
+
+            <TextView
+                    android:id="@+id/profile_deadlift"
+                    android:gravity="right"
+                    android:layout_width="0dp"
+                    android:layout_marginEnd="25dp"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/gilroy_bold"
+                    android:textColor="@color/main"
+                    android:textSize="14sp"
+                    android:layout_height="wrap_content">
+            </TextView>
+
+        </LinearLayout>
+        <View
+                android:id="@+id/profile_deadlift_divider"
+                android:background="@color/bookmarks_category_divider"
+                android:layout_width="match_parent"
+                app:layout_constraintTop_toBottomOf="@id/profile_deadlift_layout"
+                android:layout_height="1dp">
+        </View>
+
+        <LinearLayout
+                android:id="@+id/profile_press_layout"
+                android:orientation="horizontal"
+                app:layout_constraintTop_toBottomOf="@id/profile_deadlift_divider"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginTop="5dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+            <TextView
+                    android:layout_marginBottom="5dp"
+                    android:layout_marginStart="25dp"
+                    android:gravity="center_vertical"
+                    android:layout_width="wrap_content"
+                    android:text="@string/max_shoulder_press"
+                    android:textAllCaps="true"
+                    android:fontFamily="@font/gilroy_regular"
+                    android:textColor="@color/dark"
+                    android:textSize="14sp"
+                    android:layout_height="wrap_content">
+            </TextView>
+
+            <TextView
+                    android:id="@+id/profile_press"
+                    android:gravity="right"
+                    android:layout_width="0dp"
+                    android:layout_marginEnd="25dp"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/gilroy_bold"
+                    android:textColor="@color/main"
+                    android:textSize="14sp"
+                    android:layout_height="wrap_content">
+            </TextView>
+
+        </LinearLayout>
+        <View
+                android:id="@+id/profile_press_divider"
+                android:background="@color/bookmarks_category_divider"
+                android:layout_width="match_parent"
+                app:layout_constraintTop_toBottomOf="@id/profile_press_layout"
+                android:layout_height="1dp">
+        </View>
+
+        <TextView
+                android:id="@+id/profile_latest_header"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="15dp"
+                android:text="@string/latest_posts"
+                android:textAllCaps="true"
+                android:textColor="@color/dark"
+                android:fontFamily="@font/gilroy_bold"
+                android:textSize="15sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/profile_press_divider"/>
+
+        <GridLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="25dp"
+                android:layout_marginTop="@dimen/margin_medium"
+                android:layout_marginEnd="25dp"
+                android:layout_marginBottom="10dp"
+                android:columnCount="3"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/profile_latest_header"
+                android:useDefaultMargins="true">
+
+            <com.makeramen.roundedimageview.RoundedImageView
+                    android:id="@+id/latest1"
+                    android:layout_width="0dp"
+                    android:layout_height="130dp"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/latest1"
+                    android:layout_columnWeight="1"
+                    android:layout_gravity="fill"
+                    app:riv_corner_radius="6dp"/>
+            <com.makeramen.roundedimageview.RoundedImageView
+                    android:layout_width="0dp"
+                    android:layout_height="130dp"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/latest2"
+                    android:layout_columnWeight="1"
+                    android:layout_gravity="fill"
+                    app:riv_corner_radius="6dp"/>
+            <com.makeramen.roundedimageview.RoundedImageView
+                    android:layout_width="0dp"
+                    android:layout_height="130dp"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/latest3"
+                    android:layout_columnWeight="1"
+                    android:layout_gravity="fill"
+                    app:riv_corner_radius="6dp"/>
+
+        </GridLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+</androidx.core.widget.NestedScrollView>
+
+    <RelativeLayout
+            android:id="@+id/profile_loading"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center">
+
+        <ProgressBar
+                android:indeterminateTint="@color/main"
+                android:minWidth="800dp"
+                android:maxWidth="100dp"
+                android:minHeight="80dp"
+                android:maxHeight="100dp"
+                android:layout_marginTop="50dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:indeterminate="true" />
+    </RelativeLayout>
+
+</FrameLayout>
+
+
+

@@ -1,0 +1,168 @@
+<resources>
+    <string name="app_name">Hollywood Aethetics</string>
+    <string name="signInButton">Already a member? Sign in</string>
+    <string name="signInIntro">Your personal way to a movie star body</string>
+    <string name="next">Next</string>
+    <string name="male">Male</string>
+    <string name="female">Female</string>
+    <string name="gender">Gender</string>
+    <string name="cm">cm</string>
+    <string name="in">in</string>
+    <string name="height">Height</string>
+    <string name="weight">Weight</string>
+    <string name="kg">kg</string>
+    <string name="lbs">lbs</string>
+    <string name="fitness_level">Fitness level</string>
+    <string name="goals">Goals</string>
+    <string name="choose_goals">Choose your primary goals</string>
+    <string name="build_muscle">Wolverine’s Muscle</string>
+    <string name="build_strength">Captain’s America Strength</string>
+    <string name="lose_fat">Fight Club Density</string>
+    <string name="performance">Performance </string>
+    <string name="performance_sub">Set up your 5 reps maximums</string>
+    <string name="max_incline">Incline Press</string>
+    <string name="max_chin_ups">Chin Ups</string>
+    <string name="max_shoulder_press">Shoulder Press</string>
+    <string name="max_deadlift">Deadlift</string>
+    <string name="finalize_introduce">Your personal way</string>
+    <string name="finalize_description">We built the best program for you</string>
+    <string name="finalize_splitname">Recommended split</string>
+    <string name="complete_your_profile">Complete your profile</string>
+    <string name="choose_your_avatar">Select an avatar</string>
+
+
+    <string name="longteststring">Physique description required here </string>
+
+    <!--Fitness Levels Descriptions -->
+    <string name="newbie">Novice</string>
+    <string name="level_newbie_description">I’ve never trained before</string>
+    <string name="advanced">Advanced</string>
+    <string name="level_advanced_description">Very experienced with consistent training</string>
+    <string name="beginner">Beginner</string>
+    <string name="level_beginner_description">Some experience</string>
+    <string name="intermediate">Intermediate</string>
+    <string name="level_intermediate_description">Moderate experience with consistent training</string>
+
+
+    <!--Goals Descriptions -->
+    <string name="goal_build_muscle_description">I’m about to build a plate armour chest and a steel body as well</string>
+    <string name="goal_build_strength_description">Impressive power and impossible strength - that’s what i wish</string>
+    <string name="goal_lose_fat_description">I want to get rid of this stubborn fat, and become chiseled, like a statue </string>
+
+    <!--Physiques Descriptions -->
+    <string name="spartan_title">Spartan Physique</string>
+    <string name="spartan_text">Just some random text blah-blah-blah overwhelming</string>
+    <string name="olympus_title">Olympus Physique</string>
+    <string name="olympus_text">Just some random text blah-blah-blah overwhelming</string>
+    <string name="avengers_title">Avengers Physique</string>
+    <string name="avengers_text">Just some random text blah-blah-blah overwhelming</string>
+    <string name="wonder_title">Wonder Woman Physique</string>
+    <string name="wonder_text">Just some random text blah-blah-blah overwhelming</string>
+
+    <!-- Registration Fragment -->
+    <string name="profile_username">Username</string>
+    <string name="fullname">Full name</string>
+    <string name="email">Email</string>
+    <string name="register_terms">By signing up you agree to our u Terms &amp; Conditions</string>
+    <string name="profile_password">Password</string>
+    <string name="create_profile">Sign Up</string>
+
+    <!-- Library Fragment -->
+    <string name="category_title">Categories</string>
+    <string name="category_text">Browse all of our recommended exercises by categories</string>
+    <string name="interactive_title">Interactive</string>
+    <string name="interactive_text">Browse exercise library with interactive real-human physique experience</string>
+    <string name="search_title">Search</string>
+    <string name="search_text">Search for a certain exercise in our library</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="dialog">Please wait! This may take a moment.</string>
+    <string name="workout_of_the_day">Workout of the day</string>
+    <string name="workouts_library">Workouts Library</string>
+    <string name="daily_workouts">Daily Workouts</string>
+    <string name="youtube_community">Youtube Community</string>
+    <string name="edit_profile">Edit Profile</string>
+    <string name="keylifts">Keylifts</string>
+    <string name="profile_info">Profile info</string>
+    <string name="profile_Keylifts">Keylifts</string>
+    <string name="physique">Physique</string>
+    <string name="split">Split</string>
+    <string name="account_settings">Account Titles</string>
+    <string name="delete_all_saved_workouts">Delete all saved workouts</string>
+    <string name="membership">Membership</string>
+    <string name="save">save</string>
+    <string name="your_profile">Your Profile</string>
+    <string name="profile_settings">Settings</string>
+    <string name="personal_stats">Personal Stats</string>
+    <string name="keylifts_performance">Keylifts Performance</string>
+    <string name="inclinerep">Incline Bench, 5rep</string>
+    <string name="keylifts_5rep_performance">Keylifts 5 Reps Performance</string>
+    <string name="account">Account</string>
+    <string name="profile_membership">Premium Features</string>
+    <string name="profile_change_password">Change Password</string>
+    <string name="save_dailyworkouts">Save Daily Workouts</string>
+    <string name="profile_truncate">Clean Dailies Library</string>
+    <string name="search">Search</string>
+    <string name="hollywood_aesthetics">Hollywood Aesthetics</string>
+    <string name="person_name">Person Name</string>
+    <string name="person_info">Person Info</string>
+    <string name="person_bio">Person Bio</string>
+    <string name="name">Name</string>
+    <string name="info">Info</string>
+    <string name="person_activity">Person Activity</string>
+    <string name="actor">Actor</string>
+    <string name="wrestler">Wrestler</string>
+    <string name="athlete">Athlete</string>
+    <string name="other">Other</string>
+    <string name="physique_model">Physique Model</string>
+    <string name="chest_shoulders">Chest+Shoulders</string>
+    <string name="describe_your_person_to_build_a_physique_model">Describe your person to build a physique model</string>
+    <string name="some_info_to_show_in_a_physique_card">Some info to show in a physique card</string>
+    <string name="description">Description</string>
+    <string name="if_your_physique_model_is_empty_make_sure_to_fill_of_the_fields_correctly">If your physique model is empty, make sure to fill all of the fields correctly</string>
+    <string name="friends">Friends</string>
+    <string name="titles">Titles</string>
+    <string name="aesthetics">aesthetics</string>
+    <string name="latest_posts">Latest Posts</string>
+    <string name="you_have_no_aesthetics_build_yet">You have no aesthetics built yet</string>
+    <string name="forgot_your_password">Forgot your password?</string>
+    <string name="sign_in">Sign In</string>
+    <string name="password">Password</string>
+    <string name="login_or_email">Login or email</string>
+    <string name="error_fillthefields">Please,fill all the fields</string>
+    <string name="error_wrongpass">No users with such parameters found</string>
+    <string name="log_out">Log Out</string>
+    <string name="leaderboards">Leaderboards</string>
+    <string name="physiqueleader">Physique:</string>
+    <string name="your_results">Your Results</string>
+    <string name="technique_guide">Technique Guide</string>
+    <string name="video_details">Video Details</string>
+    <string name="listed_exercises">Listed Exercises</string>
+    <string name="workout_details">Workout Details</string>
+    <string name="workout_notes">Workout Notes</string>
+    <string name="create_profile_intro">Create Profile</string>
+    <string name="exercises">Exercises</string>
+    <string name="recommended_rest_time_2_3_mins">Recommended rest time: 2-3 mins</string>
+    <string name="make_a_workout_note">Make a workout note</string>
+    <string name="sets">\Sets: \</string>
+    <string name="reps">\"Reps: \</string>
+    <string name="define_person_s_strongest_muscles">Define person\'s strongest muscles</string>
+    <string name="aesthetic_details">Aesthetic Details</string>
+    <string name="acitvity">Acitvity</string>
+    <string name="weight_column">Weight:</string>
+    <string name="reps_column">Reps:</string>
+    <string name="exdetails_for">for</string>
+    <string name="no_comments">NO COMMENTS</string>
+    <string name="no_exercise_listed">No Exercise Listed</string>
+    <string name="profile_information">Profile information</string>
+    <string name="cards">Cards</string>
+    <string name="home">Home</string>
+    <string name="profile">Profile</string>
+    <string name="library">Library</string>
+    <string name="Creator">Creator</string>
+    <string name="captain">Captain</string>
+    <string name="HHomephys">Home Physique</string>
+
+
+</resources>

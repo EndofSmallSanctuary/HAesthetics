@@ -1,0 +1,246 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:background="@android:color/white"
+        android:layout_height="match_parent"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        tools:context=".HeatherBasedApplications.Part_Home.HomeFragment">
+
+    <androidx.core.widget.NestedScrollView
+            android:id="@+id/home_container"
+            android:visibility="gone"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:orientation="vertical"
+                android:layout_height="wrap_content">
+        <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+            <ImageView
+                    android:id="@+id/home_dailyprev"
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp"
+                    android:scaleType="centerCrop"
+                    app:layout_constraintTop_toTopOf="parent">
+            </ImageView>
+
+            <TextView
+                    android:id="@+id/workouts_oftheday"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_big"
+                    android:background="@drawable/workout_of_the_day_background"
+                    android:fontFamily="@font/gilroy_regular"
+                    android:gravity="right"
+                    android:padding="5dp"
+                    android:paddingStart="15dp"
+                    android:text="@string/workout_of_the_day"
+                    android:textColor="@color/white"
+                    android:textSize="15sp"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"/>
+
+            <TextView
+                    android:id="@+id/workouts_date"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:textAllCaps="true"
+                    android:textColor="@color/main"
+                    android:textSize="12sp"
+                    android:fontFamily="@font/gilroy_bold"
+                    app:layout_constraintLeft_toLeftOf="@id/workouts_name"
+                    app:layout_constraintBottom_toTopOf="@id/workouts_name"/>
+
+            <TextView
+                    android:id="@+id/workouts_name"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:textColor="@color/white"
+                    android:textSize="20sp"
+                    android:fontFamily="@font/gilroy_bold"
+                    android:layout_marginBottom="50dp"
+                    android:layout_marginLeft="15dp"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"/>
+
+            <TextView
+                    android:layout_marginTop="@dimen/margin_medium"
+                    android:id="@+id/workouts_split"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/workout_of_the_day_split"
+                    android:fontFamily="@font/gilroy_bold"
+                    android:textAllCaps="true"
+                    android:padding="5dp"
+                    android:textColor="@color/main"
+                    android:textSize="12sp"
+                    app:layout_constraintLeft_toLeftOf="@id/workouts_name"
+                    app:layout_constraintTop_toBottomOf="@id/workouts_name"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+            <View  android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:foreground="@color/gray"
+                    android:layout_gravity="bottom"/>
+<!--            <TextView android:textColor="@color/dark"-->
+<!--                    android:fontFamily="@font/gilroy_regular"-->
+<!--                    android:layout_gravity="center"-->
+<!--                    android:id="@+id/dashboard_workout_library"-->
+<!--                    android:background="@drawable/rounded_selector"-->
+<!--                    android:padding="8dp"-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_marginTop="16dp"-->
+<!--                    android:text="@string/workouts_library"/>-->
+            <TextView
+                android:id="@+id/home_emptyrecycler"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_big"
+                android:textSize="25sp"
+                android:textColor="@color/dark"
+                android:layout_marginStart="@dimen/margin_medium"
+                android:text="@string/daily_workouts"
+                android:fontFamily="@font/gilroy_bold">
+            </TextView>
+
+            <androidx.recyclerview.widget.RecyclerView
+                    android:layout_marginTop="@dimen/margin_medium"
+                    android:id="@+id/home_dailyrecycler"
+                    android:visibility="visible"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+            </androidx.recyclerview.widget.RecyclerView>
+
+<!--            <TextView-->
+<!--                    android:id="@+id/home_emptyrecycler"-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:visibility="gone"-->
+<!--                    android:layout_marginTop="@dimen/margin_big"-->
+<!--                    android:textSize="18sp"-->
+<!--                    android:layout_gravity="center"-->
+<!--                    android:textColor="@android:color/black"-->
+<!--                    android:text="There are no saved workouts"-->
+<!--                    android:fontFamily="@font/gilroy_regular">-->
+<!--            </TextView>-->
+
+            <TextView
+                    android:drawableLeft="@drawable/ic_youtube"
+                    android:drawablePadding="@dimen/margin_medium"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_big"
+                    android:textSize="25sp"
+                    android:textColor="@color/dark"
+                    android:layout_marginStart="@dimen/margin_medium"
+                    android:text="@string/youtube_community"
+                    android:fontFamily="@font/gilroy_bold">
+            </TextView>
+
+            <androidx.recyclerview.widget.RecyclerView
+                    android:layout_marginTop="@dimen/margin_medium"
+                    android:id="@+id/home_youtube_recycler"
+                    android:visibility="visible"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+            </androidx.recyclerview.widget.RecyclerView>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_marginTop="20dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="150dp"
+                    android:layout_marginStart="30dp"
+                    android:layout_marginEnd="30dp">
+
+            <com.makeramen.roundedimageview.RoundedImageView
+                    android:id="@+id/home_leaderboards"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/leaderboards"
+                    app:riv_corner_radius="10dp"
+
+                />
+
+                <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/leaderboards"
+                        android:textColor="@color/white"
+                        android:fontFamily="@font/gilroy_bold"
+                        android:textSize="30sp"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintBottom_toBottomOf="parent"/>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_marginTop="20dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="150dp"
+                    android:layout_marginStart="30dp"
+                    android:layout_marginEnd="30dp">
+
+                <com.makeramen.roundedimageview.RoundedImageView
+                        android:id="@+id/home_workoutnotes"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/workoutnotes"
+                        app:riv_corner_radius="10dp"
+
+                        />
+
+                <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/workout_notes"
+                        android:textColor="@color/white"
+                        android:fontFamily="@font/gilroy_bold"
+                        android:textSize="30sp"
+                        android:gravity="center"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintBottom_toBottomOf="parent"/>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+
+
+        </LinearLayout>
+
+
+    </androidx.core.widget.NestedScrollView>
+
+    <RelativeLayout
+            android:id="@+id/home_loading"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center">
+
+        <ProgressBar
+                android:indeterminateTint="@color/main"
+                android:minWidth="800dp"
+                android:maxWidth="100dp"
+                android:minHeight="80dp"
+                android:maxHeight="100dp"
+                android:layout_marginTop="50dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:indeterminate="true" />
+    </RelativeLayout>
+
+</FrameLayout>

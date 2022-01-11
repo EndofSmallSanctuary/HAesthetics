@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/light_gray"
+        android:orientation="vertical"
+        tools:context=".WorkoutNotes.WorkoutNotesActivity">
+
+    <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+        <androidx.appcompat.widget.Toolbar
+                android:id="@+id/notes_toolbar"
+                android:layout_width="match_parent"
+                android:background="@android:color/white"
+                android:theme="@style/ToolbarColoredBackArrow"
+                android:layout_height="@dimen/toolbar_size"/>
+
+        <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left|center_vertical"
+                android:text="@string/workout_notes"
+                android:layout_marginStart="50dp"
+                android:fontFamily="@font/gilroy_bold"
+                android:textColor="@color/dark"
+                android:textSize="25sp"/>
+
+        <View  android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:foreground="@color/gray"
+                android:layout_gravity="bottom"/>
+    </FrameLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/notes_recycler"
+            android:layout_marginTop="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+</LinearLayout>

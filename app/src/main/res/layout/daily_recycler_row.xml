@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="300dp"
+        android:layout_height="170dp"
+        android:layout_marginStart="@dimen/margin_medium"
+        android:layout_marginEnd="@dimen/margin_medium"
+        android:background="@android:color/transparent"
+        xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+    <ImageView
+                android:id="@+id/daily_row_dailyprev"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="centerCrop"
+                android:padding="5dp"
+               app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintEnd_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:src="@drawable/survey_pic">
+    </ImageView>
+
+    <View
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:background="@drawable/daily_row_mask" />
+
+    <TextView
+            android:id="@+id/daily_row_date"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:textAllCaps="true"
+            android:textColor="@color/main"
+            android:textSize="12sp"
+            android:fontFamily="@font/gilroy_bold"
+            app:layout_constraintLeft_toLeftOf="@id/daily_row_name"
+            app:layout_constraintBottom_toTopOf="@id/daily_row_name"/>
+
+    <TextView
+            android:id="@+id/daily_row_name"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:textColor="@color/white"
+            android:textSize="18sp"
+            android:fontFamily="@font/gilroy_bold"
+            android:layout_marginBottom="50dp"
+            android:layout_marginLeft="15dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"/>
+
+    <TextView
+            android:layout_marginTop="@dimen/margin_medium"
+            android:id="@+id/daily_row_split"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/workout_of_the_day_split"
+            android:fontFamily="@font/gilroy_bold"
+            android:textAllCaps="true"
+            android:padding="5dp"
+            android:textColor="@color/main"
+            android:textSize="12sp"
+            app:layout_constraintLeft_toLeftOf="@id/daily_row_name"
+            app:layout_constraintTop_toBottomOf="@id/daily_row_name"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

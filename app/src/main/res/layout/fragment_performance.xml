@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:aapt="http://schemas.android.com/aapt"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    <View
+            android:id="@+id/center"
+            android:layout_width="1dp"
+            android:layout_height="1dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"/>
+
+    <TextView
+            android:id="@+id/performance_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/SurveyHeaderStyle"
+            android:layout_marginBottom="@dimen/margin_small"
+            android:text="@string/performance"
+            app:layout_constraintBottom_toTopOf="@+id/performance_subtitle"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            />
+
+    <TextView
+            android:id="@+id/performance_subtitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="18sp"
+            android:layout_marginBottom="@dimen/margin_big"
+            android:fontFamily="@font/gilroy_bold"
+            android:text="@string/performance_sub"
+            android:textColor="@color/switch_text_color_unselected"
+            app:layout_constraintBottom_toTopOf="@+id/performance_max_pullups"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            />
+
+
+    <TextView
+            android:textSize="17sp"
+            android:textColor="@color/white"
+            android:id="@+id/performance_max_pullups"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:text="@string/max_incline"
+            app:layout_constraintBottom_toTopOf="@+id/performance_max_incline_input"
+            app:layout_constraintEnd_toEndOf="@+id/performance_max_incline_input"
+            app:layout_constraintRight_toLeftOf="@+id/center"
+            app:layout_constraintStart_toStartOf="@+id/performance_max_incline_input"
+           android:fontFamily="@font/gilroy_bold"/>
+
+
+    <EditText
+            android:id="@+id/performance_max_incline_input"
+            android:hint="0"
+            android:gravity="center_horizontal"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toLeftOf="@+id/center"
+            app:layout_constraintTop_toBottomOf="@+id/center"
+            style="@style/PerformanceInputStyle"/>
+
+    <TextView
+            android:textSize="17sp"
+            android:textColor="@color/white"
+            android:id="@+id/performance_max_pushups"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:text="@string/max_chin_ups"
+            app:layout_constraintBottom_toTopOf="@+id/performance_max_chinups_input"
+            app:layout_constraintEnd_toEndOf="@+id/performance_max_chinups_input"
+            app:layout_constraintStart_toStartOf="@+id/performance_max_chinups_input"
+            android:fontFamily="@font/gilroy_bold"/>
+
+
+    <EditText
+            android:id="@+id/performance_max_chinups_input"
+            android:gravity="center_horizontal"
+            app:layout_constraintLeft_toRightOf="@+id/center"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/center"
+            style="@style/PerformanceInputStyle"/>
+
+    <TextView
+            android:textSize="17sp"
+            android:textColor="@color/white"
+            android:id="@+id/performance_max_squats"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_gigantic"
+            android:text="@string/max_deadlift"
+            app:layout_constraintEnd_toEndOf="@+id/performance_max_incline_input"
+            app:layout_constraintRight_toLeftOf="@+id/center"
+            app:layout_constraintStart_toStartOf="@+id/performance_max_incline_input"
+            app:layout_constraintTop_toBottomOf="@+id/performance_max_incline_input"
+           android:fontFamily="@font/gilroy_bold"/>
+
+
+    <TextView
+            android:textSize="17sp"
+            android:textColor="@color/white"
+            android:id="@+id/performance_max_dips"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_gigantic"
+            android:text="@string/max_shoulder_press"
+            app:layout_constraintEnd_toEndOf="@+id/performance_max_chinups_input"
+            app:layout_constraintStart_toStartOf="@+id/performance_max_chinups_input"
+            app:layout_constraintTop_toBottomOf="@+id/performance_max_incline_input"
+            android:fontFamily="@font/gilroy_bold"/>
+
+    <EditText
+            android:id="@+id/performance_max_deadlift_input"
+            android:layout_marginTop="8dp"
+            android:gravity="center_horizontal"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toLeftOf="@+id/center"
+            app:layout_constraintTop_toBottomOf="@+id/performance_max_squats"
+            style="@style/PerformanceInputStyle"/>
+
+    <EditText
+            android:id="@+id/performance_max_press_input"
+            android:layout_marginTop="8dp"
+            android:gravity="center_horizontal"
+            app:layout_constraintLeft_toRightOf="@+id/center"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/performance_max_dips"
+            style="@style/PerformanceInputStyle"/>
+
+    <TextView
+            android:background="@drawable/switch_selected"
+            android:textSize="17sp"
+            android:textColor="@color/main"
+            android:id="@+id/performance_metric"
+            android:gravity="center"
+            android:layout_width="96dp"
+            android:layout_height="43dp"
+            android:layout_marginTop="@dimen/margin_gigantic"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/performance_max_press_input"
+            android:fontFamily="@font/gilroy_bold"/>
+
+
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

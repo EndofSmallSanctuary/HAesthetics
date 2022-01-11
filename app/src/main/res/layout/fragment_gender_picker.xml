@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+        android:paddingLeft="@dimen/margin_huge"
+        android:paddingRight="@dimen/margin_huge"
+        android:layout_width="match_parent"
+        android:background="@android:color/transparent"
+        android:layout_height="match_parent"
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/genderpicker_male"
+            android:background="@drawable/offer_unselected"
+            android:focusable="true"
+            android:clickable="true"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:foreground="?attr/selectableItemBackground"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintDimensionRatio="1:1"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toLeftOf="@id/center"
+
+
+            >
+
+        <TextView
+                android:textSize="20dp"
+                android:textColor="@color/white"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/male"
+                android:drawableTop="@drawable/icon_male"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                android:fontFamily="@font/gilroy_bold"
+                android:gravity="center_horizontal"
+                app:layout_constraintTop_toTopOf="parent"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <View
+            android:id="@+id/center"
+            android:layout_height="0dp"
+            android:layout_width="@dimen/margin_big"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"/>
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/genderpicker_female"
+            android:background="@drawable/offer_unselected"
+            android:focusable="true"
+            android:clickable="true"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:foreground="?attr/selectableItemBackground"
+            app:layout_constraintDimensionRatio="1:1"
+            app:layout_constraintLeft_toRightOf="@id/center"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+
+           >
+
+        <TextView
+                android:textSize="20dp"
+                android:textColor="@color/white"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/female"
+                android:drawableTop="@drawable/icon_female"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                android:fontFamily="@font/gilroy_bold"
+                android:gravity="center_horizontal"
+                app:layout_constraintTop_toTopOf="parent"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <TextView
+           android:layout_marginBottom="@dimen/margin_gigantic"
+            android:text="@string/gender"
+            app:layout_constraintBottom_toTopOf="@id/genderpicker_male"
+            app:layout_constraintLeft_toLeftOf="parent"
+            style="@style/SurveyHeaderStyle"
+            app:layout_constraintRight_toRightOf="parent"
+            android:fontFamily="@font/gilroy_bold">
+
+    </TextView>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

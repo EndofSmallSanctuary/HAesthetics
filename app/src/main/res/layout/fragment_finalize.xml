@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:orientation="vertical"
+        android:animateLayoutChanges="true"
+        android:weightSum="1"
+        xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <View
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_weight="0.5">
+
+    </View>
+
+    <TextView
+            android:layout_marginTop="@dimen/margin_big"
+            android:layout_marginBottom="@dimen/margin_small"
+            android:text="@string/finalize_introduce"
+            android:layout_gravity="center_horizontal"
+            style="@style/SurveySubHeaderStyle"
+            android:fontFamily="@font/gilroy_bold"/>
+
+    <TextView
+            android:layout_gravity="center_horizontal"
+            android:textSize="18sp"
+            android:textColor="@color/switch_text_color_unselected"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/margin_huge"
+            android:text="@string/finalize_description"
+            android:fontFamily="@font/gilroy_bold"
+           />
+
+
+    <FrameLayout
+
+            android:id="@+id/finalize_placeholder"
+            android:layout_width="match_parent"
+            android:layout_height="250dp"
+            android:visibility="gone"
+        >
+
+    </FrameLayout>
+
+
+    <com.makeramen.roundedimageview.RoundedImageView
+            android:id="@+id/finalize_pic"
+            android:clickable="true"
+            android:focusable="true"
+            android:layout_width="200dp"
+            android:background="@drawable/offer_unselected"
+            android:padding="@dimen/padding_mini"
+            app:riv_corner_radius="8dp"
+            android:layout_height="250dp"
+            android:layout_gravity="center_horizontal"
+            android:src="@drawable/physique_prev_spartan"
+            android:layout_marginBottom="@dimen/margin_big"
+            android:scaleType="fitXY">
+
+    </com.makeramen.roundedimageview.RoundedImageView>
+
+    <TextView
+            android:layout_marginBottom="@dimen/margin_small"
+            android:text="@string/finalize_splitname"
+            android:layout_gravity="center_horizontal"
+            style="@style/SurveySubHeaderStyle"
+            android:fontFamily="@font/gilroy_bold"/>
+
+    <TextView
+            android:id="@+id/finalize_split"
+            android:layout_gravity="center_horizontal"
+            android:textSize="18sp"
+            android:textColor="@color/main"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/margin_huge"
+            android:text="@string/choose_goals"
+            android:fontFamily="@font/gilroy_bold"
+            />
+
+
+
+
+
+
+</LinearLayout>

@@ -1,0 +1,535 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:aapt="http://schemas.android.com/aapt"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:id="@+id/edit_toolbar"
+        android:descendantFocusability="beforeDescendants"
+        android:layout_width="match_parent"
+        android:background="@color/light_gray"
+        android:layout_height="match_parent">
+    <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+        <androidx.appcompat.widget.Toolbar
+                android:id="@+id/edit_profile_toolbar"
+                android:layout_width="match_parent"
+                android:background="@android:color/white"
+                android:theme="@style/ToolbarColoredBackArrow"
+                android:layout_height="@dimen/toolbar_size"/>
+
+        <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left|center_vertical"
+                android:text="@string/profile_settings"
+                android:layout_marginStart="50dp"
+                android:fontFamily="@font/gilroy_bold"
+                android:textColor="@color/dark"
+                android:textSize="25sp"/>
+
+
+        <TextView
+                android:clickable="true"
+                android:focusable="true"
+                android:textSize="14sp"
+                android:textColor="@color/white"
+                android:layout_gravity="right|center_vertical|center_horizontal|center|end"
+                android:id="@+id/edit_profile_save"
+                android:background="@drawable/classic_chip_size_radius_selector"
+                android:paddingLeft="10dp"
+                android:paddingTop="6dp"
+                android:paddingRight="10dp"
+                android:fontFamily="@font/gilroy_bold"
+                android:paddingBottom="6dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="@dimen/default_screen_margin"
+                android:text="@string/save"/>
+
+        <View  android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:foreground="@color/gray"
+                android:layout_gravity="bottom"/>
+
+    </FrameLayout>
+
+
+    <ScrollView
+            android:id="@+id/edit_profile_scrollview"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="@dimen/toolbar_size">
+
+        <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+            ВДРУГ ЗАХОЧЕШЬ ПОДНЯТЬ
+
+            <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp"
+                    android:orientation="vertical">
+                <ImageView
+                        android:id="@+id/edit_profile_backgroundholder"
+                        android:layout_width="match_parent"
+                        android:src="@drawable/grad"
+                        android:scaleType="centerCrop"
+                        android:layout_height="200dp" />
+
+
+                <com.mikhaellopez.circularimageview.CircularImageView
+                        android:id="@+id/edit_profile_image"
+                        android:layout_width="120dp"
+                        android:layout_height="120dp"
+                        android:scaleType="centerCrop"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="8dp"
+                        android:layout_marginTop="-179dp"
+                        android:layout_marginRight="8dp"
+                        android:contentDescription="@null"
+                        android:src="@drawable/physique_prev_wonder" />
+
+                <ImageView
+                        android:id="@+id/edit_profile_image_icon"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="-35dp"
+                        android:layout_marginRight="-45dp"
+                        android:background="@drawable/circle_white_with_borded_main"
+                        android:clickable="true"
+                        android:contentDescription="@null"
+                        android:focusable="true"
+                        android:scaleType="centerInside"
+                        android:src="@drawable/ic_edit_profile_picture" />
+
+                <View
+                        android:id="@+id/edit_profile_fields_background"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:background="@color/white">
+
+                </View>
+
+
+                <ImageView
+                        android:id="@+id/edit_profile_background"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_gravity="left"
+                        android:layout_marginStart="35dp"
+                        android:layout_marginTop="-100dp"
+                        android:background="@drawable/circle_white_with_borded_main"
+                        android:clickable="true"
+                        android:contentDescription="@null"
+                        android:focusable="true"
+                        android:scaleType="centerInside"
+                        android:src="@drawable/ic_edit_profile_picture" />
+            </LinearLayout>
+
+            <TextView
+                    android:id="@+id/edit_profile_header_profile"
+                    android:text="@string/your_profile"
+                    style="@style/EditProfileHeaderStyle"/>
+
+            <LinearLayout android:orientation="horizontal"
+
+                    android:background="@color/white"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                <TextView
+                        android:layout_gravity="center_vertical"
+                        android:id="@+id/edit_profile_city_username_label"
+                        android:text="@string/profile_username"
+                        style="@style/EditProfileLabelStyle"/>
+
+                <ImageView
+                        android:layout_gravity="center_vertical"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_marginStart="10dp"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/ic_lock_black_24dp">
+
+                </ImageView>
+
+                <EditText android:id="@+id/edit_profile_name"
+                        android:hint="@string/profile_username"
+                        android:focusable="false"
+                        android:textColorHint="@color/switch_text_color_unselected"
+                        style="@style/ProfileEditTextStyle"/>
+            </LinearLayout>
+            <View
+                    android:id="@+id/edit_profile_username_divider"
+                    android:background="@color/bookmarks_category_divider"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"/>
+
+
+            <LinearLayout
+                    android:orientation="horizontal"
+                    android:background="@color/white"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                <TextView
+                        android:layout_gravity="center_vertical"
+                        android:id="@+id/edit_profile_city_email_label"
+                        android:text="@string/email"
+                        style="@style/EditProfileLabelStyle"/>
+                <ImageView
+                        android:layout_gravity="center_vertical"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_marginStart="10dp"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/ic_lock_black_24dp"/>
+                <EditText
+                        android:id="@+id/edit_profile_email"
+                        android:hint="@string/email"
+                        android:focusable="false"
+                        android:textColorHint="@color/switch_text_color_unselected"
+                        android:inputType="textEmailAddress"
+                        style="@style/ProfileEditTextStyle"/>
+            </LinearLayout>
+            <View
+                    android:id="@+id/edit_profile_email_divider"
+                    android:background="@color/bookmarks_category_divider"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"/>
+
+
+            <LinearLayout
+                    android:orientation="horizontal"
+                    android:background="@color/white"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                <TextView
+                        android:layout_gravity="center_vertical"
+                        android:id="@+id/edit_profile_city_fullname_label"
+                        android:text="@string/fullname"
+                        style="@style/EditProfileLabelStyle"/>
+                <EditText
+                        android:id="@+id/edit_profile_fullname"
+                        android:hint="@string/fullname"
+
+                        android:textColorHint="@color/switch_text_color_unselected"
+                        style="@style/ProfileEditTextStyle"/>
+            </LinearLayout>
+            <View
+                    android:id="@+id/edit_profile_fullname_divider"
+                    android:background="@color/bookmarks_category_divider"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"/>
+
+
+
+
+            <TextView
+                    android:layout_gravity="bottom|left"
+                    android:text="@string/personal_stats"
+                    style="@style/EditProfileHeaderStyle"/>
+
+
+
+            <LinearLayout
+                    android:orientation="horizontal"
+                    android:background="@color/white"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                <TextView
+                        android:layout_gravity="center_vertical"
+                        android:text="@string/height"
+                        style="@style/EditProfileLabelStyle"/>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="right">
+                    <NumberPicker
+                            app:layout_constraintRight_toRightOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            android:layout_width="wrap_content"
+                            android:layout_height="100dp"
+                            android:id="@+id/edit_profile_height"
+                            android:theme="@style/NumberPickerDark" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </LinearLayout>
+            <View
+                    android:background="@color/bookmarks_category_divider"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"/>
+
+            <LinearLayout
+                    android:orientation="horizontal"
+                    android:background="@color/white"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                <TextView
+                        android:layout_gravity="center_vertical"
+                        android:text="@string/weight"
+                        style="@style/EditProfileLabelStyle"/>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="right">
+                    <NumberPicker
+                            android:theme="@style/NumberPickerDark"
+                            app:layout_constraintRight_toRightOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            android:layout_width="wrap_content"
+                            android:layout_height="100dp"
+                            android:id="@+id/edit_profile_weight"/>
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                    android:orientation="horizontal"
+                    android:background="@color/white"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                <TextView
+                        android:layout_gravity="center_vertical"
+                        android:text="@string/physique"
+                        style="@style/EditProfileLabelStyle"/>
+
+                <ImageView
+                        android:layout_gravity="center_vertical"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_marginStart="10dp"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/ic_lock_black_24dp">
+
+                </ImageView>
+                <EditText
+                        android:id="@+id/edit_profile_physique"
+                        android:hint="@string/physique"
+                        android:textColorHint="@color/switch_text_color_unselected"
+                        android:inputType="none"
+                        android:focusable="false"
+                        style="@style/ProfileEditTextStyle"/>
+            </LinearLayout>
+            <View
+                    android:background="@color/bookmarks_category_divider"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"/>
+
+
+            <LinearLayout
+                    android:orientation="horizontal"
+                    android:background="@color/white"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                <TextView
+                        android:layout_gravity="center_vertical"
+                        android:text="@string/split"
+                        style="@style/EditProfileLabelStyle"/>
+
+                <ImageView
+                        android:layout_gravity="center_vertical"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_marginStart="10dp"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/ic_lock_black_24dp">
+
+                </ImageView>
+
+                <EditText
+                        android:id="@+id/edit_profile_split"
+                        android:hint="@string/split"
+                        android:textColorHint="@color/switch_text_color_unselected"
+                        android:inputType="none"
+                        android:focusable="false"
+                        style="@style/ProfileEditTextStyle"/>
+            </LinearLayout>
+            <View
+                    android:background="@color/bookmarks_category_divider"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"/>
+
+            <TextView
+                    android:layout_gravity="bottom|left"
+                    android:text="@string/keylifts_5rep_performance"
+                    style="@style/EditProfileHeaderStyle"/>
+
+            <LinearLayout
+                    android:orientation="horizontal"
+                    android:background="@color/white"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                <TextView
+                        android:layout_gravity="center_vertical"
+                        android:text="@string/max_incline"
+                        style="@style/EditProfileLabelStyle"/>
+
+                <EditText
+                        android:id="@+id/edit_profile_incline"
+                        android:hint="@string/weight"
+                        android:textColorHint="@color/switch_text_color_unselected"
+                        android:inputType="numberDecimal"
+                        style="@style/ProfileEditTextStyle"/>
+            </LinearLayout>
+            <View
+                    android:background="@color/bookmarks_category_divider"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"/>
+
+            <LinearLayout
+                    android:orientation="horizontal"
+                    android:background="@color/white"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                <TextView
+                        android:layout_gravity="center_vertical"
+                        android:text="@string/max_chin_ups"
+                        style="@style/EditProfileLabelStyle"/>
+
+                <EditText
+                        android:id="@+id/edit_profile_chinups"
+                        android:hint="@string/weight"
+                        android:textColorHint="@color/switch_text_color_unselected"
+                        android:inputType="numberDecimal"
+                        style="@style/ProfileEditTextStyle"/>
+            </LinearLayout>
+            <View
+                    android:background="@color/bookmarks_category_divider"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"/>
+
+            <LinearLayout
+                    android:orientation="horizontal"
+                    android:background="@color/white"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                <TextView
+                        android:layout_gravity="center_vertical"
+                        android:text="@string/max_deadlift"
+                        style="@style/EditProfileLabelStyle"/>
+
+                <EditText
+                        android:id="@+id/edit_profile_deadlift"
+                        android:hint="@string/weight"
+                        android:textColorHint="@color/switch_text_color_unselected"
+                        android:inputType="numberDecimal"
+                        style="@style/ProfileEditTextStyle"/>
+            </LinearLayout>
+            <View
+                    android:background="@color/bookmarks_category_divider"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"/>
+
+            <LinearLayout
+                    android:orientation="horizontal"
+                    android:background="@color/white"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                <TextView
+                        android:layout_gravity="center_vertical"
+                        android:text="@string/max_shoulder_press"
+                        style="@style/EditProfileLabelStyle"/>
+
+                <EditText
+                        android:id="@+id/edit_profile_press"
+                        android:hint="@string/weight"
+                        android:textColorHint="@color/switch_text_color_unselected"
+                        android:inputType="numberDecimal"
+                        style="@style/ProfileEditTextStyle"/>
+            </LinearLayout>
+            <View
+                    android:background="@color/bookmarks_category_divider"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"/>
+
+            <TextView android:id="@+id/edit_profile_header_settings"
+                    android:text="@string/account"
+                    style="@style/EditProfileHeaderStyle"
+                    />
+
+            <TextView
+                    android:layout_height="wrap_content"
+                    android:id="@+id/edit_profile_action_membership"
+                    android:text="@string/profile_membership"
+                    style="@style/EditProfileLabelButtonStyle"/>
+            <View
+                    android:id="@+id/edit_bookmarks_category_divider_membership"
+                    android:background="@color/bookmarks_category_divider"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"/>
+
+            <TextView
+                    android:layout_height="wrap_content"
+                    android:id="@+id/edit_profile_change_password"
+                    android:text="@string/profile_change_password"
+                    style="@style/EditProfileLabelButtonStyle"/>
+            <View
+                    android:id="@+id/edit_profile_change_password_divider"
+                    android:background="@color/bookmarks_category_divider"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"/>
+
+            <androidx.appcompat.widget.SwitchCompat
+                    android:layout_height="wrap_content"
+                    android:theme="@style/SwitchTheme"
+                    android:id="@+id/edit_profile_social_notifications"
+                    android:checked="true"
+                    android:text="@string/save_dailyworkouts"
+                    app:switchPadding="@dimen/margin_medium"
+                    style="@style/SettingsSwitchStyle"/>
+            <View
+                    android:background="@color/bookmarks_category_divider"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"/>
+
+            <TextView
+                    android:layout_height="wrap_content"
+                    android:id="@+id/edit_profile_action_truncate"
+                    android:text="@string/profile_truncate"
+                    android:textColor="@color/dark"
+                    style="@style/EditProfileLabelButtonStyle"/>
+            <View
+                    android:id="@+id/edit_bookmarks_category_divider_truncate"
+                    android:background="@color/bookmarks_category_divider"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"/>
+            <TextView
+                    android:layout_height="wrap_content"
+                    android:id="@+id/edit_profile_action_logout"
+                    android:text="@string/log_out"
+                    android:textColor="@android:color/holo_red_light"
+                    style="@style/EditProfileLabelButtonStyle"/>
+            <View
+                    android:id="@+id/edit_bookmarks_category_divider_logout"
+                    android:background="@color/bookmarks_category_divider"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"/>
+
+            <!--            <androidx.appcompat.widget.SwitchCompat android:theme="@style/SwitchTheme" android:id="@+id/edit_profile_workout_notifications" android:text="@string/send_workout_notification" app:switchPadding="@dimen/margin_medium" style="@style/SettingsSwitchStyle"/>-->
+            <!--            <View android:background="@color/bookmarks_category_divider" android:layout_width="match_parent" android:layout_height="1dp"/>-->
+            <!--            <TextView android:textColor="@color/tomato" android:id="@+id/edit_profile_delete_account" android:text="@string/delete_account" style="@style/EditProfileLabelButtonStyle"/>-->
+            <!--            <View android:background="@color/bookmarks_category_divider" android:layout_width="match_parent" android:layout_height="1dp"/>-->
+            <!--            <TextView android:text="@string/app" style="@style/EditProfileHeaderStyle"/>-->
+            <!--            <TextView android:id="@+id/edit_profile_action_terms_and_condition" android:text="@string/profile_terms" style="@style/EditProfileLabelButtonStyle"/>-->
+            <!--            <View android:id="@+id/edit_bookmarks_category_divider_terms" android:background="@color/bookmarks_category_divider" android:layout_width="match_parent" android:layout_height="1dp"/>-->
+            <!--            <View android:id="@+id/edit_bookmarks_category_divider_privacy" android:background="@color/bookmarks_category_divider" android:layout_width="match_parent" android:layout_height="1dp"/>-->
+            <!--            <TextView android:id="@+id/edit_profile_action_contact_us" android:text="@string/profile_contact" style="@style/EditProfileLabelButtonStyle"/>-->
+            <!--            <View android:id="@+id/edit_bookmarks_category_divider_contact_us" android:background="@color/bookmarks_category_divider" android:layout_width="match_parent" android:layout_height="1dp"/>-->
+            <!--            <TextView android:id="@+id/edit_profile_action_about_us" android:text="@string/profile_about_us" style="@style/EditProfileLabelButtonStyle"/>-->
+            <!--            <View android:id="@+id/edit_bookmarks_category_divider_about_us" android:background="@color/bookmarks_category_divider" android:layout_width="match_parent" android:layout_height="1dp"/>-->
+            <!--            <TextView android:id="@+id/edit_profile_logout" android:text="@string/profile_logout" style="@style/EditProfileLabelButtonStyle"/>-->
+            <!--            <View android:id="@+id/edit_profile_logout_divider" android:background="@color/bookmarks_category_divider" android:layout_width="match_parent" android:layout_height="1dp"/>-->
+            <!--            <TextView android:id="@+id/edit_profile_version" android:focusable="false" android:clickable="false" android:foreground="@null" android:text="@string/profile_version" android:drawableRight="@null" android:drawableEnd="@null" style="@style/EditProfileLabelButtonStyle"/>-->
+            <!--            <View android:id="@+id/edit_bookmarks_category_divider_version" android:background="@color/bookmarks_category_divider" android:layout_width="match_parent" android:layout_height="1dp"/>-->
+            <!--            <View android:layout_width="match_parent" android:layout_height="24dp"/>-->
+        </LinearLayout>
+    </ScrollView>
+    <!--    <FrameLayout android:id="@+id/crouton" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_marginTop="@dimen/toolbar_size"/>-->
+</FrameLayout>
